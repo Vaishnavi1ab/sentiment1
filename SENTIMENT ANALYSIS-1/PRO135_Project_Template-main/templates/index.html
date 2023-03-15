@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Digi Diary</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+</head>
+
+<body>
+        
+    <div
+        style="color: #FFF; background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.9) 100%),url(./static/assets/bg/bg-emoji.png); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+
+        <!--App Name-->
+        <div class=" container-fluid text-center"
+            style="background-color: #4C56AF; font-family: cursive; min-height: 8vh;">
+            <h1>Digi Diary</h1>
+        </div>
+
+        <!--Day and Date-->
+        <div class="container-fluid text-left"
+            style="background-color: #263088; font-family: cursive; min-height: 3vh;">
+            <p id="display_date">Date</p>
+        </div>
+
+        <div class="container-fluid text-right mb-2" style="width: 100%; min-height: 3vh;" id="google_translate_div">
+        </div>
+
+        <!--Input New Entry and Detect Emotion-->
+        <div class="container-fluid" style=" min-height: 22vh;">
+            <div style=" color:black; font-family: cursive; width: 100%;">
+                <textarea class="form-control" id="text" name="text_input" rows="4" data-mdb-showcounter="true"
+                    maxlength="200" placeholder="How was your day?"></textarea>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-6 text-left">
+                    <button class="btn btn-lg" id="predict_button" type="submit" name="submit_b" value="submit_p"
+                        style="color:white; background-color: #4C56AF; font-family: cursive; ">Predict
+                        Emotion</button>
+                </div>
+
+                <div class="col-6 text-right ">
+                    <button class="btn btn-lg" id="save_button" type="submit" name="submit_b" value="submit_s"
+                        style="color:white; background-color: #4C56AF; font-family: cursive; ">Save This
+                        Entry</button>
+                </div>
+            </div>
+
+        </div>
+
+        
